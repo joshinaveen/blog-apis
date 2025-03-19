@@ -45,11 +45,12 @@ if (error) {
 
 module.exports = {
     nodeEnv: envVar.NODE_ENV,
-    port: envVar.PORT,
+    serverPort: envVar.SERVER_PORT,
     dbHost: envVar.DB_HOST,
     dbUser: envVar.DB_USER,
     dbPass: envVar.DB_PASS,
     dbName: envVar.DB_NAME,
+    dbPort : envVar.DB_PORT,
     jwt: {
         secret: envVar.JWT_SECRET,
         accessExpirationMinutes: envVar.JWT_ACCESS_EXPIRATION_MINUTES,

@@ -42,6 +42,9 @@ class AuthController {
     login = async (req, res) => {
         try {
             const { email, password } = req.body;
+            const isExists = await this.userService.isEmailExists(req.body.email.toLowerCase());
+            console.log("isExi", isExists);
+
             const user = await this.authService.loginWithEmailPassword(
                 email.toLowerCase(),
                 password,
